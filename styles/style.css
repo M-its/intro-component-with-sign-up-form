@@ -1,0 +1,243 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+/* Primary */
+/* Accent */
+/* Neutral */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(0, 100%, 74%);
+  font-family: "Poppins", sans-serif;
+}
+body .container {
+  background-image: url("../images/bg-intro-mobile.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+}
+body .container main {
+  width: 450px;
+  min-width: 330px;
+  max-width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9.5rem;
+  z-index: 99;
+}
+body .container main .main-text {
+  color: white;
+}
+body .container main .main-text h1 {
+  font-size: 2.75rem;
+  line-height: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+body .container main .main-text p {
+  font-size: 1.65rem;
+  line-height: 2.5rem;
+  margin-bottom: 6.3rem;
+}
+
+.free-trial-text {
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.1);
+  background: hsl(248, 32%, 49%);
+  color: white;
+  font-size: 1.5rem;
+  padding: 2rem 6rem;
+  border-radius: 10px;
+  margin-bottom: 2.5rem;
+}
+.free-trial-text p span {
+  font-weight: 700;
+}
+
+form {
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+form .input-control {
+  position: relative;
+}
+form .input-control label {
+  opacity: 0;
+  position: absolute;
+}
+form .input-control input {
+  width: 100%;
+  padding: 1.85rem;
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(249, 10%, 26%);
+}
+form .input-control i {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  font-size: 2rem;
+  visibility: hidden;
+}
+form .input-control small {
+  display: none;
+  margin-top: 0.5rem;
+  text-align: end;
+  font-size: 1.2rem;
+  color: hsl(0, 100%, 74%);
+  font-style: italic;
+}
+form .input-control.success input {
+  border-color: hsl(154, 59%, 51%);
+}
+form .input-control.success i.fa-check-circle {
+  color: hsl(154, 59%, 51%);
+  visibility: visible;
+}
+form .input-control.error input {
+  border-color: hsl(0, 100%, 74%);
+}
+form .input-control.error input.email {
+  color: hsl(0, 100%, 74%);
+}
+form .input-control.error input::placeholder {
+  color: hsl(0, 100%, 74%);
+}
+form .input-control.error i.fa-circle-exclamation {
+  color: hsl(0, 100%, 74%);
+  visibility: visible;
+}
+form .input-control.error small {
+  display: block;
+}
+form button {
+  border: none;
+  background-color: hsl(154, 59%, 51%);
+  padding: 2rem;
+  border-radius: 7px;
+  margin-bottom: -1rem;
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+form button::before {
+  box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.1);
+  content: "";
+  background-color: hsl(154, 59%, 51%);
+  border-radius: 7px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+form button:hover::before {
+  transition: all 0.3s ease-in-out;
+  filter: brightness(110%);
+}
+form button span {
+  position: relative;
+}
+form .agreement-text {
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(246, 25%, 77%);
+  line-height: 2.2rem;
+  padding: 0 2rem;
+}
+form .agreement-text span {
+  font-weight: 700;
+  color: hsl(0, 100%, 74%);
+}
+
+footer {
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .attribution {
+  font-size: 1.6rem;
+  text-align: center;
+  color: white;
+}
+footer .attribution a {
+  color: hsl(248, 32%, 49%);
+  transition: 0.3s ease-in-out;
+}
+footer .attribution a:hover {
+  color: hsl(246, 25%, 77%);
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 800px) {
+  body .container {
+    background-image: url("../images/bg-intro-desktop.png");
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container main {
+    width: 1200px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 0;
+  }
+  body .container main .main-text {
+    width: 50%;
+    text-align: left;
+    margin-right: 6rem;
+  }
+  body .container main .main-text h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+    margin-bottom: 2.5rem;
+  }
+  body .container main .main-text p {
+    font-size: 1.65rem;
+    line-height: 2.5rem;
+    margin-bottom: 0;
+  }
+  body .container main .form-wrapper {
+    width: 50%;
+  }
+  body .container main .form-wrapper form {
+    padding: 4rem;
+    gap: 2rem;
+  }
+  body .container footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,141 @@
+@use "mixins";
+@use "base";
+
+form {
+    @include mixins.box-shadow(false);
+    background: white;
+
+    @include mixins.flex-direction();
+    gap: 1.6rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+
+    .input-control {
+        position: relative;
+
+        label {
+            opacity: 0;
+            position: absolute;
+        }
+
+        input {
+            width: 100%;
+            padding: 1.85rem;
+            border-radius: 5px;
+            border: 1px solid base.$grayish-blue;
+
+            font-size: 1.5rem;
+            @include mixins.make-bold(true);
+            color: base.$dark-blue;
+        }
+
+        i {
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
+
+            font-size: 2rem;
+
+            visibility: hidden;
+        }
+
+        small {
+            display: none;
+            margin-top: 0.5rem;
+
+            text-align: end;
+            font-size: 1.2rem;
+            color: base.$red;
+            font-style: italic;
+        }
+
+        &.success {
+            input {
+                border-color: base.$green;
+            }
+
+            i.fa-check-circle {
+                color: base.$green;
+                visibility: visible;
+            }
+        }
+
+        &.error {
+            input {
+                border-color: base.$red;
+            }
+
+            input.email {
+                color: base.$red;
+            }
+            input::placeholder {
+                color: base.$red;
+            }
+
+            i.fa-circle-exclamation {
+                color: base.$red;
+                visibility: visible;
+            }
+
+            small {
+                display: block;
+            }
+        }
+    }
+
+    button {
+        border: none;
+        background-color: base.$green;
+        padding: 2rem;
+        border-radius: 7px;
+        margin-bottom: -1rem;
+
+        position: relative;
+        display: inline-block;
+
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        &::before {
+            @include mixins.box-shadow(true);
+            content: "";
+            background-color: base.$green;
+
+            border-radius: 7px;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+            transition: all 0.3s ease-in-out;
+            filter: brightness(110%);
+        }
+
+        span {
+            position: relative;
+        }
+    }
+
+    .agreement-text {
+        font-weight: 500;
+        font-size: 1rem;
+        color: base.$grayish-blue;
+        line-height: 2.2rem;
+
+        padding: 0 2rem;
+
+        & span {
+            @include mixins.make-bold(true);
+            color: base.$red;
+        }
+    }
+}

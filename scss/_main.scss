@@ -1,0 +1,45 @@
+@use "mixins";
+@use "base";
+
+body {
+    background-color: base.$red;
+    font-family: "Poppins", sans-serif;
+
+    .container {
+        background-image: url("../images/bg-intro-mobile.png");
+        @include mixins.flex-direction();
+        align-items: center;
+        margin: auto 0;
+
+        main {
+            width: 450px;
+            min-width: 330px;
+            max-width: 90%;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 9.5rem;
+
+            z-index: 99;
+
+            .main-text {
+                color: white;
+
+                & h1 {
+                    font-size: 2.75rem;
+                    line-height: 3.5rem;
+                    margin-bottom: 2.5rem;
+                }
+
+                & p {
+                    font-size: 1.65rem;
+                    line-height: 2.5rem;
+                    margin-bottom: 6.3rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@media screen and (min-width: 800px) {
+    body {
+        .container {
+            background-image: url("../images/bg-intro-desktop.png");
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            main {
+                width: 1200px;
+                max-width: 80%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin-top: 0;
+
+                .main-text {
+                    width: 50%;
+                    text-align: left;
+                    margin-right: 6rem;
+
+                    & h1 {
+                        font-size: 5rem;
+                        line-height: 6rem;
+                        margin-bottom: 2.5rem;
+                    }
+
+                    & p {
+                        font-size: 1.65rem;
+                        line-height: 2.5rem;
+                        margin-bottom: 0;
+                    }
+                }
+
+                .form-wrapper {
+                    width: 50%;
+
+                    form {
+                        padding: 4rem;
+                        gap: 2rem;
+                    }
+                }
+            }
+
+            footer {
+                width: 100%;
+                text-align: center;
+                position: fixed;
+                bottom: 10px;
+            }
+        }
+    }
+}

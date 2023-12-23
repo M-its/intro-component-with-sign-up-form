@@ -1,0 +1,25 @@
+@use "base";
+
+footer {
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .attribution {
+        font-size: 1.6rem;
+        text-align: center;
+        color: white;
+    }
+
+    .attribution a {
+        color: base.$blue;
+        transition: 0.3s ease-in-out;
+    }
+
+    .attribution a:hover {
+        color: base.$grayish-blue;
+        transition: 0.3s ease-in-out;
+    }
+}
